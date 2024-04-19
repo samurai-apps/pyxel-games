@@ -11,6 +11,10 @@ https://kitao.github.io/pyxel/wasm/launcher/?run=samurai-apps.pyxel-games.games.
 
 https://kitao.github.io/pyxel/wasm/launcher/?run=samurai-apps.pyxel-games.games.02_catch_game
 
+### 03. 迷路ゲーム
+
+https://kitao.github.io/pyxel/wasm/launcher/?run=samurai-apps.pyxel-games.games.03_maze_game
+
 ## Watch Arts !
 
 ### 01. 跳ねるボール
