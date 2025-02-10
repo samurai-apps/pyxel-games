@@ -154,10 +154,10 @@ SYMBOL_KEYS: list[int, dict[int, tuple[str, str]]] = [
         pyxel.KEY_7: ("7", "'"),
         pyxel.KEY_8: ("8", "("),
         pyxel.KEY_9: ("9", ")"),
-        pyxel.KEY_0: ("0", "="),
+        pyxel.KEY_0: ("0", "~"),
         pyxel.KEY_MINUS: ("-", "="),
-        pyxel.KEY_CARET: ("^", "~"),
-        pyxel.KEY_APP1: ("|", "¦"),
+        pyxel.KEY_CARET: ("^", ""),
+        pyxel.KEY_BACKSLASH: ("\\", "|"),  # 「ろ」キー
         # ２段目（通常入力 & シフト時の記号）
         pyxel.KEY_AT: ("@", "@"),
         pyxel.KEY_LEFTBRACKET: ("[", "{"),
@@ -169,9 +169,8 @@ SYMBOL_KEYS: list[int, dict[int, tuple[str, str]]] = [
         pyxel.KEY_COMMA: (",", "<"),
         pyxel.KEY_PERIOD: (".", ">"),
         pyxel.KEY_SLASH: ("/", "?"),
-        pyxel.KEY_BACKSLASH: ("\\", "_"),  # 「ろ」キー
         # その他のキー
-        pyxel.KEY_UNDERSCORE: ("_", "_"),  # シフトなしでも入力できる
+        pyxel.KEY_UNDERSCORE: ("_", "_"),  # 「ろ」キー
     },
     {
         # １段目（通常入力 & シフト時の記号）
