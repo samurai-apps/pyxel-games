@@ -127,7 +127,7 @@ US_MODE = 1
 
 # QWERTY 配列（通常時）
 KEYBOARD_LAYOUT = [
-    ["1234567890-^\\ ", "qwertyuiop@[", "asdfghjkl;:]", "zxcvbnm,./\\"],
+    ["1234567890-^\\ ", "qwertyuiop@[", "asdfghjkl;:]", "zxcvbnm,./_"],
     ["`1234567890-= ", " qwertyuiop[]\\", " asdfghjkl;'", " zxcvbnm,./"],
 ]
 
@@ -159,7 +159,7 @@ SYMBOL_KEYS: list[int, dict[int, tuple[str, str]]] = [
         pyxel.KEY_CARET: ("^", ""),
         pyxel.KEY_BACKSLASH: ("\\", "|"),  # 「ろ」キー
         # ２段目（通常入力 & シフト時の記号）
-        pyxel.KEY_AT: ("@", "@"),
+        pyxel.KEY_AT: ("@", "`"),
         pyxel.KEY_LEFTBRACKET: ("[", "{"),
         # ３段目（通常入力 & シフト時の記号）
         pyxel.KEY_SEMICOLON: (";", "+"),
