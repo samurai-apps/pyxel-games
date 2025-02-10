@@ -2,7 +2,7 @@ import pyxel
 import random
 
 # タイピング用の単語リスト
-WORDS = [
+KEYWORDS = [
     "def",
     "return",
     "import",
@@ -102,6 +102,7 @@ PYXELS = [
     # "def main():",
     "return x",
 ]
+WORDS = KEYWORDS + SYMBOLS + PYXELS
 
 # サウンドエフェクト
 SFX_CORRECT = 0
@@ -233,7 +234,8 @@ class TypingGame:
 
     def get_new_word(self) -> str:
         """新しい単語を取得"""
-        return random.choice(WORDS + SYMBOLS + PYXELS)
+        # next_words は十分な長さがあると仮定
+        return self.next_words.pop(0) 
 
     def change_state(self, state) -> None:
         """ゲームの状態を変更"""
@@ -241,13 +243,14 @@ class TypingGame:
 
         if state == STATE_TITLE:
             """ゲームの初期化"""
-            self.word = random.choice(WORDS)
             self.keyboard_mode = JIS_MODE  # 初期値はJIS配列
             self.input_text = ""
             self.score = 0
             self.total_chars = 0
             self.timer = GAME_TIME  # 30秒（900フレーム）
             self.shift_mode = False  # シフトキーの状態
+            self.next_words = random.sample(WORDS, k=len(WORDS))
+            self.word = self.get_new_word()
 
             pyxel.playm(BGM_NORMAL, loop=True)  # 通常BGMに戻す
 
@@ -327,7 +330,7 @@ class TypingGame:
 
     def update_gameover(self):
         """ゲームオーバー画面の処理"""
-        if pyxel.btnp(pyxel.KEY_RETURN):
+        if pyxel.btnp(pyxel.KEY_SPACE):
             self.change_state(STATE_TITLE)
 
     def draw(self):
@@ -373,7 +376,7 @@ class TypingGame:
         pyxel.text(
             44, 54, f"Speed: {self.total_chars / 30:.2} char/sec", pyxel.COLOR_YELLOW
         )
-        pyxel.text(42, 80, "Press Enter to Retry", pyxel.COLOR_CYAN)
+        pyxel.text(42, 80, "Press SPACE to Retry", pyxel.COLOR_CYAN)
 
     def draw_keyboard(self):
         """キーボードの描画（通常モード / 記号モード）"""
