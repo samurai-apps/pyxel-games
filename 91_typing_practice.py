@@ -158,7 +158,7 @@ SYMBOL_KEYS: list[int, dict[int, tuple[str, str]]] = [
         pyxel.KEY_0: ("0", "~"),
         pyxel.KEY_MINUS: ("-", "="),
         pyxel.KEY_CARET: ("^", ""),
-        pyxel.KEY_BACKSLASH: ("\\", "|"),  # 「ろ」キー
+        pyxel.KEY_BACKSLASH: ("\\", "|"),
         # ２段目（通常入力 & シフト時の記号）
         pyxel.KEY_AT: ("@", "`"),
         pyxel.KEY_LEFTBRACKET: ("[", "{"),
@@ -170,7 +170,6 @@ SYMBOL_KEYS: list[int, dict[int, tuple[str, str]]] = [
         pyxel.KEY_COMMA: (",", "<"),
         pyxel.KEY_PERIOD: (".", ">"),
         pyxel.KEY_SLASH: ("/", "?"),
-        # その他のキー
         pyxel.KEY_UNDERSCORE: ("_", "_"),  # 「ろ」キー
     },
     {
@@ -235,7 +234,7 @@ class TypingGame:
     def get_new_word(self) -> str:
         """新しい単語を取得"""
         # next_words は十分な長さがあると仮定
-        return self.next_words.pop(0) 
+        return self.next_words.pop(0)
 
     def change_state(self, state) -> None:
         """ゲームの状態を変更"""
