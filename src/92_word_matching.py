@@ -58,6 +58,7 @@ def load_words_from_csv(filename):
 class MatchingGame:
     def __init__(self):
         pyxel.init(SCREEN_W, SCREEN_H, title="単語マッチングゲーム")
+        pyxel.mouse(True)
         umplus12 = pyxel.Font("umplus_j12r.bdf")
         self.font = umplus12
         self.reset_game()
