@@ -14,3 +14,9 @@ pyxelでゲームを作って、プログラミングを学ぼう
 ![単語マッチング](images/92_word_matching.gif)
 
 [遊んでみる](https://kitao.github.io/pyxel/wasm/launcher/?run=samurai-apps.pyxel-games.src.92_word_matching)
+
+
+## ライセンス
+
+* ソースコードは [MIT License](LICENSE) です。
+* フォントに [M+ PLUS](https://mplusfonts.github.io/) を使用させていただいています。（[ライセンス表示](OFL.md)）
