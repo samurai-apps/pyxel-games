@@ -6,7 +6,7 @@ import math
 # 画面サイズ
 SCREEN_W = 180
 SCREEN_H = 160
-CARD_W = 40
+CARD_W = 70
 CARD_H = 20
 LIFE = 3
 
